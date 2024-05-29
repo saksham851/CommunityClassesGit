@@ -1,0 +1,81 @@
+Git & GitHub Cheat Sheet 
+Git: A version control system to track changes in your project files over time.
+GitHub: A platform to host and manage Git repositories online.
+Terminal Commands
+ Creating and Navigating Folders 
+ •Create a folder: mkdir <folder-name>
+ •Enter a folder: cd <folder-name>
+ Initializing a Repository
+ •Initialize a local Git repo: git init 
+File Operations 
+
+Create a new file: touch <file-name>
+ Tracking Changes 
+•Check status: git status
+•Stage changes: git add 
+•Commit changes: git commit -m "your message" 
+•Unstage a file: git restore --staged <file-name>
+
+
+ Viewing History
+      • Commit history: git log Detailed commit history: git log --summary 
+
+       Undoing Changes 
+      •	Reset to a specific commit: git reset <commit-hash> (moves changes to unstaged area) 
+
+      Stashing Changes
+
+      •	Stash changes: git stash 
+      •	Apply stashed changes: git stash pop 
+      •	Clear all stashes: git stash clear
+
+
+
+
+        Branching & Merging
+        Branch Operations
+
+      •	List branches: git branch
+      •	List all branches: git branch -a 
+      •	Create a new branch: git branch <branch-name> 
+      •	Delete a branch: git branch -d <branch-name> 
+      •	Delete a remote branch: git push origin --delete <branch-name>
+      •	Create and switch to a new branch: git checkout -b <branch-name>
+      •	Switch to a remote branch: git checkout -b <branch-name> origin/<branch-name> 
+      •	Rename a branch: git branch -m <old-name> <new-name>
+      •	Switch branches: git checkout <branch-name> 
+      •	Switch to the previous branch: git checkout –
+
+        Merging Branches 
+
+      •	Merge a branch into current branch: git merge <branch-name>
+
+       Sharing & Updating Projects 
+
+      •	Pushing and Pulling 
+      •	Push a branch: git push origin <branch-name>
+      •	Push with upstream tracking: git push -u origin <branch-name>
+      •	Pull changes: git pull Pull from a specific branch: git pull origin <branch-name> 
+
+Working with Forks 
+      •	Clone a project: git clone <project-url> 
+
+Fetch updates from the original repo: 
+
+      •	git fetch --all –prune
+      •	git reset --hard upstream/main 
+      •	Push to your fork: git push origin main 
+      •	Alternatively, pull updates: git pull upstream main
+      •	Rebasing Combine commits: git rebase -i <commit-hash>
+
+
+Rebasing 
+      •	Combine commits: git rebase -i <commit-hash> 
+
+Handling Merge Conflicts 
+
+When two people change the same line, conflicts need manual resolution before merging.
+      •	Identify the conflict: Git will mark the conflicting area in your files.
+      •	Resolve the conflict: Edit the file to fix the conflicts. 
+      •	Add the resolved file: git add <file-name> 
+      •	Continue the merge: git commit (if needed)
